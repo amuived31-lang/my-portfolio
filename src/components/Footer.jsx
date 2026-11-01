@@ -1,20 +1,20 @@
-import { Mail, Cloud } from 'lucide-react';
+import { Mail, Phone } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from './SocialIcons';
 import { personalInfo } from '../data/portfolioData';
 
-export default function Footer() {
-  const year = new Date().getFullYear();
+const CURRENT_YEAR = new Date().getFullYear();
 
+export default function Footer() {
   return (
     <footer className="footer" role="contentinfo">
       <div className="container">
         <div className="footer__inner">
           <div className="footer__logo" aria-label="Umadevi portfolio logo">
-            U. Umadevi
+            Umadevi.
           </div>
 
           <p className="footer__copy">
-            © {year} Umadevi. Crafted with ❤️ for AWS Student Builder Challenge 2026.
+            © {CURRENT_YEAR} Umadevi. Student Frontend Developer • Bangalore, Karnataka.
           </p>
 
           <div className="footer__links" aria-label="Footer social links">
@@ -23,7 +23,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               className="footer__link"
-              aria-label="GitHub"
+              aria-label="GitHub profile"
               title="GitHub"
             >
               <GithubIcon size={16} />
@@ -33,7 +33,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               className="footer__link"
-              aria-label="LinkedIn"
+              aria-label="LinkedIn profile"
               title="LinkedIn"
             >
               <LinkedinIcon size={16} />
@@ -41,19 +41,19 @@ export default function Footer() {
             <a
               href={`mailto:${personalInfo.email}`}
               className="footer__link"
-              aria-label="Email"
+              aria-label="Send Email"
               title="Email"
             >
               <Mail size={16} />
             </a>
-          </div>
-        </div>
-
-        {/* AWS badge */}
-        <div style={{ textAlign: 'center' }}>
-          <div className="footer__aws-badge">
-            <Cloud size={14} />
-            Built for AWS Student Builder Challenge — Build Your Tech Superpower 2026
+            <a
+              href={`tel:${personalInfo.phone}`}
+              className="footer__link"
+              aria-label="Call Phone"
+              title="Phone"
+            >
+              <Phone size={16} />
+            </a>
           </div>
         </div>
       </div>

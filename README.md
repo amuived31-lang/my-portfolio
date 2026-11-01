@@ -1,187 +1,77 @@
-# SUPERPOWER 01 — Umadevi: Beyond the Code
+# Umadevi — Personal Developer Portfolio
 
-> **AWS Student Builder Challenge: Build Your Tech Superpower 2026**
-
-A visually stunning, fully functional personal portfolio website built with **React + Vite**, featuring a cosmic design language, interactive Superpower Discovery Machine, and AWS Amplify deployment readiness.
+Personal developer portfolio for **Umadevi**, Student Frontend Developer and B.Tech CSE (AIML) student at Amity University, Bangalore. Built with **React 19 + Vite**, featuring modern responsive layouts, subtle cosmic accent visuals, accessible color contrast, and a prominent showcase for the featured **Weather App**.
 
 ---
 
-## 🚀 Live Demo
+## 🚀 Featured Project
 
-> Deployed via AWS Amplify — [Add your live URL here after deployment]
-
----
-
-## ✨ Features
-
-- **Cosmic Visual Design** — Deep midnight navy background with electric blue, violet and magenta neon gradients, glassmorphism cards and animated stars
-- **Interactive Superpower Discovery Machine** — Click to reveal one of 6 unique developer superpowers with animated rings, particle effects and rich discovery cards
-- **Smooth Animations** — Framer Motion scroll reveals, floating elements and micro-interactions
-- **Dark / Light Theme** — Toggle with persistence via localStorage
-- **Fully Responsive** — Works beautifully on desktop, tablet and mobile
-- **SEO Optimized** — Meta tags, semantic HTML and proper heading structure
-- **AWS Ready** — Configured for AWS Amplify hosting
+- **Weather App**
+  - **Live Demo:** [weattherapp.vercel.app](https://weattherapp.vercel.app)
+  - **Source Code:** [github.com/amuived31-lang/weattherapp](https://github.com/amuived31-lang/weattherapp)
+  - **Technologies:** HTML, CSS, JavaScript, Weather API
+  - **Features:** Global city search, real-time temperature, condition status (sunny, cloudy, rainy, windy), humidity percentage, wind speed velocity, dynamic weather icons, live API integration, and error handling.
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ Technical Stack
 
-| Technology | Purpose |
-|---|---|
-| React 18 | Component-based UI |
-| Vite | Build tool & dev server |
-| Framer Motion | Animations & transitions |
-| Lucide React | Icons |
-| Vanilla CSS | Custom design system |
-| AWS Amplify | Hosting & CI/CD |
+- **Framework:** React 19 + Vite
+- **Animations:** Framer Motion (with `@media (prefers-reduced-motion)` support)
+- **Icons:** Lucide React & inline semantic SVGs
+- **Styling:** Custom CSS design system with CSS custom properties & glassmorphism
+- **Theme:** Dark & Light mode toggle with localStorage persistence
 
 ---
 
-## 📁 Project Structure
+## 📁 Sections & Project Structure
 
 ```
 src/
 ├── components/
-│   ├── Navbar.jsx          # Sticky nav with active section detection
-│   ├── Hero.jsx            # Cosmic hero with orbital portrait
-│   ├── About.jsx           # Personal story, education, interests
-│   ├── Skills.jsx          # Technology cards with progress bars
-│   ├── Projects.jsx        # Project cards with problem statements
-│   ├── SuperpowerMachine.jsx  # ⭐ Interactive discovery machine
-│   ├── Contact.jsx         # Contact cards and social links
-│   └── Footer.jsx          # Footer with AWS badge
+│   ├── Navbar.jsx          # Sticky responsive nav with active section detection & theme toggle
+│   ├── Hero.jsx            # Hero section with title, bio, orbital portrait & quick CTAs
+│   ├── About.jsx           # Personal introduction, location, role & career objectives
+│   ├── Skills.jsx          # Core technical skills: HTML, Java, CSS, Python, React, Git
+│   ├── Education.jsx       # Amity University B.Tech (CSE AIML) & verified certifications
+│   ├── Projects.jsx        # Prominent Weather App showcase with architecture & live preview
+│   ├── Contact.jsx         # Contact cards (Email, Phone, LinkedIn, GitHub) & direct action
+│   ├── Footer.jsx          # Clean footer with copyright & working social links
+│   └── SocialIcons.jsx     # Semantic SVG brand icons
 ├── data/
-│   └── portfolioData.js    # ✏️ All editable content lives here
-├── App.jsx                 # Root with theme management
-├── App.css                 # Component styles
-├── index.css               # Global design system
-└── main.jsx                # Entry point
-public/
-└── favicon.svg
+│   └── portfolioData.js    # Verified portfolio data source
+├── App.jsx                 # Application root & theme provider
+├── App.css                 # Scoped layout & component styles
+├── index.css               # Design system tokens, typography & accessibility rules
+└── main.jsx                # Vite React root
 ```
 
 ---
 
-## ⚙️ Getting Started
-
-### Prerequisites
-- Node.js 18+
-- npm 9+
-
-### Installation
+## 💻 Development & Build Commands
 
 ```bash
 # Install dependencies
 npm install
 
-# Start development server
+# Start local development server
 npm run dev
 
-# Build for production
+# Run oxlint checks
+npm run lint
+
+# Build production bundle
 npm run build
 
-# Preview production build
+# Preview production build locally
 npm run preview
 ```
 
 ---
 
-## ✏️ Personalizing Your Portfolio
+## 📬 Contact & Profiles
 
-All content is centralized in **`src/data/portfolioData.js`**. Replace every `[placeholder]` value with your real information:
-
-1. **`personalInfo`** — Name, email, GitHub, LinkedIn, Twitter
-2. **`aboutData`** — Bio paragraphs, education, interests, aspirations  
-3. **`skills`** — Proficiency levels for each technology
-4. **`projects`** — Titles, descriptions, tech stacks, GitHub/demo links
-5. **`superpowers`** — Already complete with 6 unique discovery outcomes
-
-### Adding Your Photo
-
-Replace the portrait placeholder in `Hero.jsx` and `About.jsx`:
-
-```jsx
-// In Hero.jsx — find hero__portrait div and replace placeholder with:
-<img src="/your-photo.jpg" alt="Umadevi" />
-
-// Place your-photo.jpg in the public/ directory
-```
-
-### Adding Project Screenshots
-
-Place screenshot images in `public/` and update `portfolioData.js`:
-
-```js
-image: '/project-screenshot.png',  // instead of null
-```
-
----
-
-## ☁️ AWS Amplify Deployment
-
-### Step 1: Push to GitHub
-
-```bash
-git init
-git add .
-git commit -m "feat: SUPERPOWER 01 — Umadevi portfolio"
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO.git
-git push -u origin main
-```
-
-### Step 2: Connect to AWS Amplify
-
-1. Log in to [AWS Amplify Console](https://console.aws.amazon.com/amplify/)
-2. Click **"New app"** → **"Host web app"**
-3. Select **GitHub** as source provider
-4. Authorize AWS Amplify to access your GitHub
-5. Select your repository and `main` branch
-6. Amplify auto-detects Vite — confirm build settings:
-   - **Build command**: `npm run build`
-   - **Output directory**: `dist`
-7. Click **"Save and deploy"**
-
-### Step 3: Custom Domain (Optional)
-
-In Amplify Console → App Settings → Domain management → Add custom domain
-
-### Build Settings (amplify.yml — auto-detected)
-
-```yaml
-version: 1
-frontend:
-  phases:
-    preBuild:
-      commands:
-        - npm ci
-    build:
-      commands:
-        - npm run build
-  artifacts:
-    baseDirectory: dist
-    files:
-      - '**/*'
-  cache:
-    paths:
-      - node_modules/**/*
-```
-
----
-
-## 🔒 Security Notes
-
-- Never commit `.env` files with real secrets
-- All external links use `rel="noopener noreferrer"`
-- No API keys or credentials in source code
-- AWS IAM follows least-privilege principles
-
----
-
-## 📜 License
-
-MIT — Built with passion for the AWS Student Builder Challenge 2026.
-
----
-
-*"Building Ideas into Real-World Solutions." — Umadevi*
+- **Email:** [amuived31@gmail.com](mailto:amuived31@gmail.com)
+- **Phone:** [+91 8792211600](tel:8792211600)
+- **LinkedIn:** [linkedin.com/in/uma-devi-12a28a3a2/](https://www.linkedin.com/in/uma-devi-12a28a3a2/)
+- **GitHub:** [github.com/amuived31-lang](https://github.com/amuived31-lang)

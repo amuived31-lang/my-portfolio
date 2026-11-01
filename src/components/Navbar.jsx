@@ -1,12 +1,12 @@
-import { useState, useEffect, useRef } from 'react';
-import { Moon, Sun, Menu, X } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Moon, Sun } from 'lucide-react';
 
 const NAV_LINKS = [
   { label: 'Home', href: '#home' },
   { label: 'About', href: '#about' },
   { label: 'Skills', href: '#skills' },
+  { label: 'Education', href: '#education' },
   { label: 'Projects', href: '#projects' },
-  { label: 'Superpower', href: '#superpower' },
   { label: 'Contact', href: '#contact' },
 ];
 
@@ -23,7 +23,7 @@ export default function Navbar({ theme, toggleTheme }) {
       const sections = NAV_LINKS.map(l => l.href.replace('#', ''));
       for (let i = sections.length - 1; i >= 0; i--) {
         const el = document.getElementById(sections[i]);
-        if (el && el.getBoundingClientRect().top <= 100) {
+        if (el && el.getBoundingClientRect().top <= 120) {
           setActiveSection(sections[i]);
           break;
         }
@@ -47,9 +47,16 @@ export default function Navbar({ theme, toggleTheme }) {
             className="navbar__logo"
             onClick={() => handleNavClick('#home')}
             aria-label="Go to top"
-            style={{ background: 'none', border: 'none', cursor: 'pointer', fontFamily: 'var(--font-display)', fontSize: '1.4rem', fontWeight: 800 }}
+            style={{
+              background: 'none',
+              border: 'none',
+              cursor: 'pointer',
+              fontFamily: 'var(--font-display)',
+              fontSize: '1.4rem',
+              fontWeight: 800,
+            }}
           >
-            U. Umadevi
+            Umadevi.
           </button>
 
           <ul className="navbar__links" role="list">

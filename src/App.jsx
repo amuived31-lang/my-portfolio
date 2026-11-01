@@ -6,23 +6,27 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
 import Skills from './components/Skills';
+import Education from './components/Education';
 import Projects from './components/Projects';
-import SuperpowerMachine from './components/SuperpowerMachine';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 export default function App() {
-  const [theme, setTheme] = useState('dark');
-
-  // Persist theme preference
-  useEffect(() => {
-    const saved = localStorage.getItem('umadevi-theme');
-    if (saved) setTheme(saved);
-  }, []);
+  const [theme, setTheme] = useState(() => {
+    try {
+      return localStorage.getItem('umadevi-theme') || 'dark';
+    } catch {
+      return 'dark';
+    }
+  });
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem('umadevi-theme', theme);
+    try {
+      localStorage.setItem('umadevi-theme', theme);
+    } catch {
+      // ignore storage errors
+    }
   }, [theme]);
 
   const toggleTheme = () => setTheme(t => (t === 'dark' ? 'light' : 'dark'));
@@ -43,9 +47,9 @@ export default function App() {
         <div className="gradient-divider" aria-hidden="true" />
         <Skills />
         <div className="gradient-divider" aria-hidden="true" />
-        <Projects />
+        <Education />
         <div className="gradient-divider" aria-hidden="true" />
-        <SuperpowerMachine />
+        <Projects />
         <div className="gradient-divider" aria-hidden="true" />
         <Contact />
       </main>
