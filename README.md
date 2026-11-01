@@ -35,7 +35,7 @@ src/
 │   ├── Skills.jsx          # Core technical skills: HTML, Java, CSS, Python, React, Git
 │   ├── Education.jsx       # Amity University B.Tech (CSE AIML) & verified certifications
 │   ├── Projects.jsx        # Prominent Weather App showcase with architecture & live preview
-│   ├── Contact.jsx         # Contact cards (Email, Phone, LinkedIn, GitHub) & direct action
+│   ├── Contact.jsx         # Contact cards (Email, LinkedIn, GitHub) & direct action
 │   ├── Footer.jsx          # Clean footer with copyright & working social links
 │   └── SocialIcons.jsx     # Semantic SVG brand icons
 ├── data/
@@ -72,6 +72,5 @@ npm run preview
 ## 📬 Contact & Profiles
 
 - **Email:** [amuived31@gmail.com](mailto:amuived31@gmail.com)
-- **Phone:** [+91 8792211600](tel:8792211600)
 - **LinkedIn:** [linkedin.com/in/uma-devi-12a28a3a2/](https://www.linkedin.com/in/uma-devi-12a28a3a2/)
 - **GitHub:** [github.com/amuived31-lang](https://github.com/amuived31-lang)

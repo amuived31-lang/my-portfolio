@@ -1,4 +1,4 @@
-import { Mail, ArrowDown, Phone, ExternalLink, Send } from 'lucide-react';
+import { Mail, ArrowDown, ExternalLink, Send } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from './SocialIcons';
 import { personalInfo } from '../data/portfolioData';
 import { motion } from 'framer-motion';
@@ -119,14 +119,6 @@ export default function Hero() {
                 title={`Email: ${personalInfo.email}`}
               >
                 <Mail size={20} />
-              </a>
-              <a
-                href={`tel:${personalInfo.phone}`}
-                className="hero__social-link"
-                aria-label="Phone number"
-                title={`Phone: ${personalInfo.phoneFormatted}`}
-              >
-                <Phone size={19} />
               </a>
             </div>
           </motion.div>

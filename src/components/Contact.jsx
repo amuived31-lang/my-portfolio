@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Mail, MapPin, Send } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from './SocialIcons';
 import { personalInfo } from '../data/portfolioData';
 
@@ -11,15 +11,6 @@ const CONTACT_CARDS = [
     icon: <Mail size={22} color="#fff" />,
     bg: 'linear-gradient(135deg, #ec4899, #8b5cf6)',
     id: 'contact-email',
-    isExternal: false,
-  },
-  {
-    label: 'Phone',
-    value: personalInfo.phoneFormatted,
-    href: `tel:${personalInfo.phone}`,
-    icon: <Phone size={22} color="#fff" />,
-    bg: 'linear-gradient(135deg, #059669, #10b981)',
-    id: 'contact-phone',
     isExternal: false,
   },
   {

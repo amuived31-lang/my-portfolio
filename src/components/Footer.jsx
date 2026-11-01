@@ -1,4 +1,4 @@
-import { Mail, Phone } from 'lucide-react';
+import { Mail } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from './SocialIcons';
 import { personalInfo } from '../data/portfolioData';
 
@@ -45,14 +45,6 @@ export default function Footer() {
               title="Email"
             >
               <Mail size={16} />
-            </a>
-            <a
-              href={`tel:${personalInfo.phone}`}
-              className="footer__link"
-              aria-label="Call Phone"
-              title="Phone"
-            >
-              <Phone size={16} />
             </a>
           </div>
         </div>

@@ -12,8 +12,6 @@ export const personalInfo = {
   location: "Bangalore, Karnataka",
   educationShort: "AMITY UNIVERSITY, BTech - CSE AIML",
   email: "amuived31@gmail.com",
-  phone: "8792211600",
-  phoneFormatted: "+91 8792211600",
   github: "https://github.com/amuived31-lang",
   linkedin: "https://www.linkedin.com/in/uma-devi-12a28a3a2/",
 };
